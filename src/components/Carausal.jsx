@@ -7,14 +7,13 @@ import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules"
 import { Container, Row, Col, Button, Badge, Spinner } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
-// Import Swiper styles
+
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-// API URL
 const BASE_URL = "https://api.jikan.moe/v4/top/anime"
 
 const Carausal = () => {
@@ -56,13 +55,13 @@ const Carausal = () => {
         .finally(() => setLoading(false))
     }, [])
   
-    // Function to truncate text
+   // to truncate text
     const truncateText = (text, maxLength) => {
       if (!text) return ""
       return text.length > maxLength ? text.substring(0, maxLength) + "..." : text
     }
   
-    // Function to navigate to anime detail page
+    //  navigate to anime detail page
     const handleAnimeClick = (animeId) => {
       navigate(`/anime/${animeId}`)
     }
@@ -212,6 +211,7 @@ const Carausal = () => {
               }}
               modules={[Navigation, Pagination]}
               className="anime-category-swiper"
+              
             >
               {animeData.map((anime) => (
                 <SwiperSlide key={`top-${anime.mal_id}`}>
