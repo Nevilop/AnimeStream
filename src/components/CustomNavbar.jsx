@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Navbar, Nav, Form, FormControl, Button, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CustomNavbar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -47,6 +48,8 @@ const CustomNavbar = () => {
           <Button variant="outline-light" type="submit">Search</Button>
         </Form>
         <Nav>
+
+             <Nav.Link as={Link} to="/login" style={{ fontSize: '1.2rem'}}>Login</Nav.Link>
           <Nav.Link href="#">
             <i className="bi bi-person-circle" style={{ fontSize: '1.5rem' }}></i>
           </Nav.Link>

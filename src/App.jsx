@@ -8,6 +8,7 @@ import Carausal from './components/Carausal';
 import PageDetail from './components/PageDetail';
 import Footer from './components/Footer';
 import SearchResults from './components/SearchResults';
+import LoginPage from './components/LoginPage';
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
       <Route path="/anime/:id" element={<PageDetail />} />
       <Route path="/footer" element={<Footer />} />
       <Route path="/search" element={<SearchResults />} />
+      <Route path="/login" element={<LoginPage />} />
       
     </Routes>
   );
