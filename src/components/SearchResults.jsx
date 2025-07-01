@@ -25,7 +25,7 @@ const SearchResults = () => {
 
   return (
     <div>
-        <CustomNavbar/>
+        
     <div className="container mt-4">
       <h2>Search Results for "{query}"</h2>
       {loading && <p>Loading...</p>}

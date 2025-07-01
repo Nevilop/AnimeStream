@@ -48,7 +48,7 @@ const PageDetail = () => {
 
   return (
     <div>
-        <CustomNavbar/>
+        
       <Container className="py-4">
         <Link to="/">
           <Button variant="outline-secondary inline-dark" className="mb-4">

@@ -6,9 +6,9 @@ import Footer from './Footer';
 const Home = () => {
   return (
     <div>
-      <CustomNavbar />
+  
       <Carausal/>
-     <Footer/>
+    
     </div>
   );
 };

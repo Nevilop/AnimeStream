@@ -186,9 +186,9 @@ const Carausal = () => {
           <Container>
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h2 className="h3 mb-0 text-dark">Top Anime</h2>
-              <a href="/" className="text-danger text-decoration-none">
+              <Link to="/list" className="text-danger text-decoration-none">
                 View All <i className="bi bi-chevron-right"></i>
-              </a>
+              </Link>
             </div>
   
             <Swiper
@@ -278,9 +278,9 @@ const Carausal = () => {
           <Container>
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h2 className="h3 mb-0 text-dark">Popular This Season</h2>
-              <a href="#" className="text-danger text-decoration-none">
+              <Link to="/list" className="text-danger text-decoration-none">
                 View All <i className="bi bi-chevron-right"></i>
-              </a>
+              </Link>
             </div>
   
             <Row>
@@ -334,9 +334,9 @@ const Carausal = () => {
           <Container>
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h2 className="h3 mb-0 text-dark">Popular Anime</h2>
-              <a href="#" className="text-danger text-decoration-none">
+              <Link to="/list" className="text-danger text-decoration-none">
                 View All <i className="bi bi-chevron-right"></i>
-              </a>
+              </Link>
             </div>
   
             <Swiper
