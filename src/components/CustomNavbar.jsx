@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Form, FormControl, Button, Container } from 'react-bootstrap';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CustomNavbar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,17 +17,6 @@ const CustomNavbar = () => {
     }
   };
 
-  const handleLogin = async (e) => {
-  e.preventDefault();
-  try {
-    await signInWithEmailAndPassword(auth, loginData.email, loginData.password);
-    alert('Login Successful!');
-    navigate('/'); // This line redirects to home
-  } catch (err) {
-    alert(err.message);
-  }
-};
-
   const handleLogout = async () => {
     try {
       await logout();
@@ -37,7 +27,7 @@ const CustomNavbar = () => {
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" style={{ height: "80px" }}>
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
@@ -49,13 +39,15 @@ const CustomNavbar = () => {
           />
           AnimeFlix
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="#">Trending</Nav.Link>
-            <Nav.Link as={Link} to="#">Popular</Nav.Link>
+            <Nav.Link as={Link} to="/trending">Trending</Nav.Link>
+            <Nav.Link as={Link} to="/popular">Popular</Nav.Link>
           </Nav>
-          <Form className="d-flex me-2" onSubmit={handleSubmit}>
+
+          <Form className="d-flex me-3" onSubmit={handleSubmit}>
             <FormControl
               type="search"
               placeholder="Search"
@@ -63,23 +55,17 @@ const CustomNavbar = () => {
               aria-label="Search"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              style={{ width: '300px' }}
             />
             <Button variant="outline-light" type="submit">Search</Button>
           </Form>
+
           <Nav>
             {currentUser ? (
-              <>
-                <Nav.Link onClick={handleLogout} style={{ fontSize: '1.2rem' }}>
-                  Sign Out
-                </Nav.Link>
-              </>
+              <Nav.Link onClick={handleLogout}>Sign Out</Nav.Link>
             ) : (
-              <Nav.Link as={Link} to="/login" style={{ fontSize: '1.2rem' }}>
-                Login
-              </Nav.Link>
+              <Nav.Link as={Link} to="/login">Login</Nav.Link>
             )}
-            <Nav.Link as={Link} to="#">
+            <Nav.Link as={Link} to="/profile">
               <i className="bi bi-person-circle" style={{ fontSize: '1.5rem' }}></i>
             </Nav.Link>
           </Nav>
