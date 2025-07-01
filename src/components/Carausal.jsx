@@ -185,8 +185,8 @@ const Carausal = () => {
         <section className="top-anime-slider mb-5">
           <Container>
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <h2 className="h3 mb-0">Top Anime</h2>
-              <a href="#" className="text-danger text-decoration-none">
+              <h2 className="h3 mb-0 text-dark">Top Anime</h2>
+              <a href="/" className="text-danger text-decoration-none">
                 View All <i className="bi bi-chevron-right"></i>
               </a>
             </div>
@@ -277,7 +277,7 @@ const Carausal = () => {
         <section className="seasonal-anime-slider mb-5">
           <Container>
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <h2 className="h3 mb-0">Popular This Season</h2>
+              <h2 className="h3 mb-0 text-dark">Popular This Season</h2>
               <a href="#" className="text-danger text-decoration-none">
                 View All <i className="bi bi-chevron-right"></i>
               </a>
@@ -333,7 +333,7 @@ const Carausal = () => {
         <section className="popular-anime-slider mb-5">
           <Container>
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <h2 className="h3 mb-0">Popular Anime</h2>
+              <h2 className="h3 mb-0 text-dark">Popular Anime</h2>
               <a href="#" className="text-danger text-decoration-none">
                 View All <i className="bi bi-chevron-right"></i>
               </a>
@@ -360,7 +360,7 @@ const Carausal = () => {
                         src={item.images.jpg.image_url || "/placeholder.svg"}
                         alt={item.title}
                         className="card-img-top object-fit-cover"
-                        style={{ height: 220 }}
+                        style={{ height: 220, width: "100%", objectFit: "cover" }}
                       />
                       <div className="card-body p-2">
                         <h2

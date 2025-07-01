@@ -16,7 +16,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/navbar" element={<CustomNavbar />} />
+     
       <Route path="/carausal" element={<Carausal />} />
       <Route path="/anime/:id" element={<PageDetail />} />
       <Route path="/footer" element={<Footer />} />

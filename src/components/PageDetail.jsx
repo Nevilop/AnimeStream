@@ -81,7 +81,7 @@ const PageDetail = () => {
 
           {/* Right Column */}
           <Col lg={8}>
-            <h1 className="display-5 fw-bold mb-3">{anime.title_english || anime.title}</h1>
+            <h1 className="display-5 fw-bold mb-3" style={{color:"black"}}>{anime.title_english || anime.title}</h1>
             <div className="d-flex flex-wrap gap-3 align-items-center mb-4">
               <div className="d-flex align-items-center">
                 <Star className="text-warning me-2" />
